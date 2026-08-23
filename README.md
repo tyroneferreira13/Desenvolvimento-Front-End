@@ -1,4 +1,4 @@
-# Portfólio Pessoal - Frontend Web
+# Atividade01 - Frontend Web
 
 Projeto criado para a disciplina de Desenvolvimento Front-end para Web. 
 
