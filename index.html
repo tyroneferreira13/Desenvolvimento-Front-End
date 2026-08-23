@@ -7,47 +7,91 @@
 </head>
 <body>
 
-    <h1>Portfólio Pessoal - Tyrone Ferreira</h1>
-    <p>Meu portfólio web para apresentar meus projetos, habilidades em desenvolvimento e trajetória no curso de Desenvolvimento Front-end.</p>
+    <header>
+        <h1>Portfólio Pessoal - Tyrone Ferreira</h1>
+        <p>Meu portfólio web para apresentar meus projetos, habilidades em desenvolvimento e trajetória no curso de Desenvolvimento Front-end.</p>
+    </header>
 
-    <h2>Tecnologias e Estudos</h2>
-    <ul>
-        <li>HTML5 Semântico e Acessibilidade Web</li>
-        <li>CSS3 Responsivo e Layouts com Flexbox/Grid</li>
-        <li>Controle de Versão com Git e GitHub</li>
-    </ul>
+    <main>
+        
+        <section>
+            <h2>Tecnologias e Estudos</h2>
+            <ul>
+                <li>HTML5 Semântico e Acessibilidade Web</li>
+                <li>CSS3 Responsivo e Layouts com Flexbox/Grid</li>
+                <li>Controle de Versão com Git e GitHub</li>
+            </ul>
 
-    <h2>Habilidades Técnicas</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Tecnologia</th>
-                <th>Nível de Domínio</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>HTML5 & CSS3</td>
-                <td>Em aprendizado avançado</td>
-            </tr>
-            <tr>
-                <td>Git & GitHub</td>
-                <td>Intermediário</td>
-            </tr>
-            <tr>
-                <td>JavaScript</td>
-                <td>Básico</td>
-            </tr>
-        </tbody>
-    </table>
+            <h2>Habilidades Técnicas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tecnologia</th>
+                        <th>Nível de Domínio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5 & CSS3</td>
+                        <td>Em aprendizado avançado</td>
+                    </tr>
+                    <tr>
+                        <td>Git & GitHub</td>
+                        <td>Intermediário</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Básico</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <p>
-        Confira meus repositórios no 
-        <a href="https://github.com/tyroneferreira13" target="_blank" rel="noopener noreferrer">meu perfil do GitHub</a>.
-    </p>
+            <p>
+                Confira meus repositórios no 
+                <a href="https://github.com/tyroneferreira13" target="_blank" rel="noopener noreferrer">meu perfil do GitHub</a>.
+            </p>
 
-    <h2>Foto de Perfil</h2>
-    <img src="assets/images/perfil.png" alt="Foto de perfil de Tyrone Ferreira">
+            <h2>Foto de Perfil</h2>
+            <img src="assets/images/perfil.png" alt="Foto de perfil de Tyrone Ferreira">
+        </section>
+
+        <section>
+            <h2>Entre em Contato</h2>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Formulário de Contato do Portfólio</legend>
+
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required />
+
+                    <br><br>
+
+                    <label for="email">E-mail para Contato:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <br><br>
+
+                    <label for="telefone">Telefone (DDD + Número):</label>
+                    <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="83999999999" />
+
+                    <br><br>
+
+                    <label for="data-contato">Data do Contato:</label>
+                    <input type="date" id="data-contato" name="data_contato" />
+
+                    <br><br>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Tyrone Ferreira. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
