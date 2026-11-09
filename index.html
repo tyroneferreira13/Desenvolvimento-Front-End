@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Pessoal - Tyrone Ferreira</title>
     <style>
-        /* Aula 06 - Estilização CSS Base (Tema Roxo) */
+        /* Aula 06 e 07 - Estilização Avançada com Flexbox e Tema Roxo */
         :root {
-            --primary-color: #8a2be2; /* Cor roxa aplicada */
+            --primary-color: #8a2be2;
             --primary-hover: #7b1fa2;
             --dark-color: #2c3e50;
             --light-bg: #f8f9fa;
@@ -34,15 +34,23 @@
             margin-right: auto;
         }
 
-        header h1 {
-            color: var(--dark-color);
-            margin-top: 0;
+        /* Layout Flexbox no Cabeçalho */
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
+        header h1 {
+            color: var(--dark-color);
+            margin: 0;
+        }
+
+        /* Menu alinhado com Flexbox */
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 15px 0 0 0;
+            margin: 0;
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
@@ -165,7 +173,7 @@
             <div class="video-container">
                 <h3>Vídeo Explicativo</h3>
                 <video controls width="100%">
-                    <source src="assets/videos/video-site.mp4" type="video/mp4">
+                    <source src="C:\Users\AS\Desktop\aulas frontend\assets\video-site.mp4.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
             </div>
@@ -173,7 +181,7 @@
             <div class="audio-container">
                 <h3>Áudio / Podcast da Aula</h3>
                 <audio controls>
-                    <source src="assets/videos/audio-site.mp4" type="video/mp4">
+                    <source src="C:\Users\AS\Desktop\aulas frontend\assets\audio-site.mp4.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de áudio.
                 </audio>
             </div>
@@ -204,7 +212,7 @@
             <h2>Galeria de Imagens</h2>
             <p>Para exibir fotos reais (JPG, PNG), usamos a tag img padrão:</p>
             <div class="image-container">
-                <img src="assets/imagens/sua-foto.jpg" alt="Foto no portfólio" width="300" style="border-radius: 8px; border: 1px solid #ddd;">
+                <img src="C:\Users\AS\Desktop\aulas frontend\assets\imagens\sua-foto.jpg.jpeg"" alt="Foto no portfólio" width="300" style="border-radius: 8px; border: 1px solid #ddd;">
             </div>
         </section>
     </main>
