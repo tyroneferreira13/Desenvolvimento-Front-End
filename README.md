@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EstudaFácil — Plataforma Multidisciplinar de Apoio Estudantil
 
 Plataforma Web desenvolvida para organizar rotinas de estudos, fornecer acervo de referências bibliográficas, simular médias acadêmicas e gerenciar o cronograma de entregas de estudantes de diversas áreas de ensino superior e técnico.
@@ -25,3 +26,15 @@ As capturas de tela da aplicação em versão desktop e celular encontram-se sal
     └── images/
         ├── print-desktop.png
         └── print-celular.png
+=======
+# 🚀 EstudaFácil - Plataforma Multidisciplinar de Apoio Acadêmico
+
+Projeto desenvolvido para a disciplina de **Desenvolvimento Front-End Para Web** (Curso de Graduação - Cruzeiro do Sul Virtual).
+
+## 🛠️ Tecnologias e Conteúdos Aplicados
+* **HTML5 Semântico** (Tags estruturais, formulários e tabelas)
+* **Multimídia Nativa** (Players de vídeo e áudio)
+* **CSS3 & Bootstrap 5** (Layout responsivo e paleta em roxo metalizado)
+* **JavaScript** (Simulador de média interativo e funções do DOM)
+* **Git e GitHub** (Versionamento e histórico por etapas)
+>>>>>>> ab309f2e5456c34d2dbb0c594a7a97fbcb63d875
