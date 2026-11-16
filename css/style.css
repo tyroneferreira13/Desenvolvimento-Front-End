@@ -1,0 +1,283 @@
+/* Requisito: 5+ variáveis CSS no :root */
+:root {
+    --primary: #6b21a8;        /* Roxo Profundo / Metálico */
+    --primary-light: #9333ea;  /* Roxo Claro Metálico */
+    --secondary: #06b6d4;      /* Ciano de Destaque */
+    --dark: #0f172a;           /* Fundo Escuro */
+    --light: #faf5ff;          /* Fundo Levemente Lilás */
+    --white: #ffffff;
+    --gray: #64748b;
+    --success: #10b981;
+}
+
+/* Requisito: Todo font-size em rem, com justificativa em comentário */
+html {
+    font-size: 100%; /* Base padrão de 16px para garantir acessibilidade e escalabilidade com rem */
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    position: relative;
+}
+
+/* CAMADA DE FUNDO INTERATIVA (EFEITO PARALLAX) */
+.parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.35;
+    transition: transform 0.1s ease-out;
+}
+
+.orb-1 { width: 420px; height: 420px; background: radial-gradient(circle, #a855f7, #6b21a8); top: -80px; left: -100px; }
+.orb-2 { width: 380px; height: 380px; background: radial-gradient(circle, #06b6d4, #7e22ce); top: 38%; right: -90px; }
+.orb-3 { width: 460px; height: 460px; background: radial-gradient(circle, #c084fc, #4c1d95); bottom: -100px; left: 18%; }
+
+/* Cabeçalho Translúcido com Flexbox e Sticky */
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(107, 33, 168, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Requisito: Estados de link na ordem correta (:link, :visited, :hover, :active) */
+.nav-links a:link {
+    color: var(--dark);
+    font-weight: 600;
+}
+.nav-links a:visited {
+    color: var(--dark);
+}
+.nav-links a:hover,
+.nav-links a.ativo {
+    color: var(--primary);
+}
+.nav-links a:active {
+    color: var(--secondary);
+}
+
+/* Requisito: Menu dropdown funcional via :hover */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    border-radius: 6px;
+    min-width: 150px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.4rem 1rem;
+    color: var(--dark);
+}
+.dropdown-menu li a:hover {
+    background: var(--light);
+    color: var(--primary);
+}
+
+/* Banner Hero */
+.hero {
+    background: linear-gradient(135deg, #4c1d95, #6b21a8, #3b0764);
+    color: var(--white);
+    padding: 5.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(88, 28, 135, 0.25);
+}
+
+.hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+.hero p { max-width: 650px; margin: 0 auto 2rem; font-size: 1.15rem; opacity: 0.95; }
+
+.btn-custom {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 0.8rem 2.2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #0891b2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(6, 182, 212, 0.35);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+section { margin-bottom: 4rem; }
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 2.5rem;
+}
+
+/* Requisito: Seção em Grid e animações de hover com transform */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-custom {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(107, 33, 168, 0.06);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Requisito: Pseudo-classe estrutural (:nth-child) */
+.grid-cards .card-custom:nth-child(even) {
+    border-top-color: var(--secondary);
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(107, 33, 168, 0.14);
+}
+
+.box-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(107, 33, 168, 0.06);
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #f3e8ff;
+}
+
+/* Tabela estilizada (border-collapse, padding) */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(107, 33, 168, 0.06);
+}
+
+.table-custom th, .table-custom td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.table-custom th {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.form-label { font-weight: 600; color: var(--dark); display: block; margin-bottom: 0.4rem; }
+.form-control, .form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.result-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f3e8ff;
+    border-left: 4px solid var(--primary);
+    color: #581c87;
+    font-weight: 600;
+    display: none;
+}
+
+fieldset {
+    border: 1px solid #cbd5e1;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary);
+    padding: 0 0.5rem;
+}
+
+footer {
+    background-color: var(--dark);
+    color: #94a3b8;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+}
+
+footer strong { color: var(--white); }
