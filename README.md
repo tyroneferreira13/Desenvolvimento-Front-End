@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # EstudaFácil — Plataforma Multidisciplinar de Apoio Estudantil
 
 Plataforma Web desenvolvida para organizar rotinas de estudos, fornecer acervo de referências bibliográficas, simular médias acadêmicas e gerenciar o cronograma de entregas de estudantes de diversas áreas de ensino superior e técnico.
